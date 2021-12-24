@@ -1,0 +1,168 @@
+h5{
+    margin: .6rem 0;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+}
+h3{
+    font-weight: bold;
+}
+.row{
+    border: 1px solid grey;
+    border-radius: .2rem;
+    margin: 0.6rem 0;
+    padding: 0 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(240, 31%, 86%);
+}
+nav{
+    order: 2;
+}
+.logo{
+    width: 50%;
+}
+.main img{
+    width: 100%;
+}
+.flex{
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.primary-header {
+    
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.primary-navigation{
+    --gap:min(1.5rem, 3.5rem);
+    list-style: none;
+    
+    padding-inline: 1rem;
+    margin: 0;
+    
+}
+
+.primary-navigation a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black
+    
+}
+.mobile-nav-toggle{
+    display: none;
+}
+
+@media (max-width:35rem){
+  .primary-navigation{
+    --underline-gap: .5rem;
+    padding: min(20rem, 15vh) 2rem;
+      list-style: none;
+      position: fixed;
+      z-index: 1000;
+      margin: 0;
+      flex-direction: column;
+      inset: 0 0 0 30%;
+      transform: translateX(100%); 
+      background-color: hsl(240, 88%, 74%);
+      transition: transform 500ms ease-in-out;
+  }
+
+.mobile-nav-toggle{
+    display: block;
+    position: absolute;
+    z-index: 2000;
+    right: 1rem;
+    top: 2rem;
+    background: transparent;
+    background-image: url(hamburger.svg);
+    width: 1.5rem;
+    background-repeat: no-repeat;
+    aspect-ratio: 1;
+    border: 0;
+}
+
+}
+
+@media(min-width:45em){
+  
+    .primary-header::after {
+        content: "";
+        display: block;
+        position: relative;
+        height: 1px;
+        background:hsl(var(--clr-white) / .25);
+        margin-right: -3rem;
+        width: 100%;
+        order: 1;
+     
+    }
+
+   
+}
+
+
+.left-section, .mid-section{
+    width: 33%;
+   
+}
+.mid-section{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 50%;
+    margin: auto;
+}
+.mid-right-section{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8px;
+    
+
+}
+.right-section{
+    width:15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.apply{
+    background-color: rgb(70, 144, 228);
+    color: white;
+    font-weight: 700;
+    border-radius: .2rem;
+    border:none;
+     padding: .6rem .6rem;  
+    
+}
+
+.apply:hover{
+    cursor: pointer;
+    opacity: .75;
+}
+.company, .position{
+font-size: 12px;
+font-family: 'Courier New', Courier, monospace;
+}
+
+.position{
+    font-weight:bold;
+}
+.location{
+    font-size: 0.5rem;
+}
+
+.tag {
+    margin: 0.4rem;
+    border: 1px solid grey;
+    padding: .12rem;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: .6rem;
+}
